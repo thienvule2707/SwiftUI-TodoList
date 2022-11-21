@@ -20,9 +20,12 @@ struct ListView: View {
         List {
             ForEach(items) { item in
 //                ListRowView(title: item)
+                ListRowView(item: item)
             }
+            .onDelete(perform: deleteItem)
+            .onMove(perform: moveItem)
         }
-        .listStyle(.automatic)
+        .listStyle(.plain)
         .navigationTitle(Text("Todo List 📝"))
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
