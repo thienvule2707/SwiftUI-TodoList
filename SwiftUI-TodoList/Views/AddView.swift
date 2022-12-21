@@ -12,7 +12,8 @@ struct AddView: View {
     @EnvironmentObject var listViewModel: ListViewModel
     @Environment(\.dismiss) private var dismiss
     @State var textFieldText: String = ""
-    let myColor = Color(#colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1))
+//    let myColor = Color(#colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1))
+    let myColor = Color(.secondarySystemBackground)
     
     @State var alerTitle: String = ""
     @State var showAlert: Bool = false
